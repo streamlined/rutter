@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://production.rutterapi.com/accounting/customers?access_token=<access_token>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Rutter v0.1.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic <TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 25 May 2023 22:14:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"50e-DNWGVc48Aymf3OrEECbhyusbt28"
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=RiwPy%2FpzR3ihmEX1I%2B5gaTX52IZM23MrHPn%2FJN8MgLiZPTE1DVrHvOG0MAIe%2B5nyuKqtpVl8owr9ZKHsx1hFDXX4%2FoQsP93jue0eoVpRVWluQqciApDNRCIt1CACH58U821VaA8ZXfHxw8c2GUSCS9l8fEtpqA%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7cd120ffad5e0fcd-LAX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"customers":[{"id":"00144897-32bb-4e78-8946-1937ebdfef94","platform_id":"109","customer_name":"test
+        customer","contact_name":null,"email":"test@gmail.com","currency_code":null,"phone":"+1712345344","addresses":[{"type":"billing","address1":"123
+        Fake Street","address2":null,"city":"Los Angeles","region":"CA","country":"US","postal_code":"90021"},{"type":"shipping","address1":"123
+        Fake Street","address2":null,"city":"Los Angeles","region":"CA","country":"US","postal_code":"90021"}],"registration_number":null,"tax_number":null,"updated_at":"2023-05-23T22:48:00.000Z","status":"INACTIVE"},{"id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","platform_id":"7","customer_name":"Test
+        Company","contact_name":null,"email":null,"currency_code":null,"phone":null,"addresses":[{"type":"billing","address1":"123
+        Fake Street","address2":null,"city":"Los Angeles","region":"CA","country":"US","postal_code":"90021"},{"type":"shipping","address1":"123
+        Fake Street","address2":null,"city":"Los Angeles","region":"CA","country":"US","postal_code":"90021"}],"registration_number":null,"tax_number":null,"updated_at":"2023-05-22T18:52:00.000Z","status":"INACTIVE"}],"next_cursor":null,"connection":{"id":"c8b3f9d7-3362-4769-b9eb-af736c0e74b4","platform":"NETSUITE","orgId":"329f1bd7-16a7-4ad8-b59b-00e1783a3da4"}}'
+  recorded_at: Thu, 25 May 2023 22:14:01 GMT
+recorded_with: VCR 6.1.0

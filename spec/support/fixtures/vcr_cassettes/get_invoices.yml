@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://production.rutterapi.com/accounting/invoices?access_token=<access_token>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Rutter v0.1.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic <TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 25 May 2023 22:13:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"1c3c-kjqnwxTiJ455YS3j6yImzfKCPgk"
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3yzv9s3faRnFjupK0E41q0LfLhJ%2FP%2F1p%2Bxspuo%2BbnyX%2F3kSRGbk1iTWvGB4cuK2MeqKSCMw7JekMqTgN%2BHbjcWooY6%2Be9ssnkdCb9kRFiuXYVTmoQE1lwUKOjPf18q0ybWYceWdnCMhrEt0hC%2FqVdYjDqaJgow%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7cd1209d19a02b90-LAX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"invoices":[{"id":"bc02d284-7d24-44ed-8060-7a49bf1ab071","platform_id":"605","document_number":"6","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","issue_date":"2023-10-25T07:00:00.000Z","due_date":"2023-10-25T07:00:00.000Z","currency_code":"USD","account_id":"","line_items":[{"id":null,"platform_id":"8","description":"Created
+        from rspec","unit_amount":"1","quantity":99999,"discount_amount":null,"sub_total":"99999","tax_amount":null,"amount":"99999","discount_percentage":null,"tax_rate_id":null,"item_id":"721f36b0-d654-4084-b318-0d9341411be6","account_id":"33970135-6336-44ff-b7e1-26c639b6c5c1"}],"status":"open","total_discount":null,"sub_total":"99999","tax_amount":null,"total_amount":"99999","amount_due":"99999","linked_payments":[],"memo":null,"created_at":"2023-05-25T19:26:00.000Z","updated_at":"2023-05-25T19:26:00.000Z"},{"id":"9a6a6b61-dc0e-48c0-98bc-cf118e6d6623","platform_id":"201","document_number":"4","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","issue_date":"2023-04-18T07:00:00.000Z","due_date":"2023-05-24T07:00:00.000Z","currency_code":"USD","account_id":"","line_items":[{"id":null,"platform_id":"6","description":"A
+        Rutter Shirt","unit_amount":"2","quantity":1,"discount_amount":null,"sub_total":"2","tax_amount":null,"amount":"2","discount_percentage":null,"tax_rate_id":null,"item_id":"cd042f4a-db0e-44d2-89b6-ef1f98c8f9e5","account_id":"33970135-6336-44ff-b7e1-26c639b6c5c1"}],"status":"partially_paid","total_discount":null,"sub_total":"2","tax_amount":null,"total_amount":"2","amount_due":"1","linked_payments":[{"id":"de07c232-890b-4f76-bc40-ae48b2c3b671","type":"INVOICE_PAYMENT","amount":"1","date":"2023-05-23T07:00:00.000Z"}],"memo":"invoice
+        push 20230418 15.26","created_at":"2023-05-23T18:21:00.000Z","updated_at":"2023-05-23T18:21:00.000Z"},{"id":"f27f571f-1631-4b69-8325-8983b17713ee","platform_id":"304","document_number":"5","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","issue_date":"2023-01-25T08:00:00.000Z","due_date":"2023-01-25T08:00:00.000Z","currency_code":"USD","account_id":"","line_items":[{"id":null,"platform_id":"8","description":"A
+        Streamlined Shirt","unit_amount":"1","quantity":999,"discount_amount":null,"sub_total":"999","tax_amount":null,"amount":"999","discount_percentage":null,"tax_rate_id":null,"item_id":"721f36b0-d654-4084-b318-0d9341411be6","account_id":"33970135-6336-44ff-b7e1-26c639b6c5c1"}],"status":"open","total_discount":null,"sub_total":"999","tax_amount":null,"total_amount":"999","amount_due":"999","linked_payments":[],"memo":null,"created_at":"2023-05-24T21:24:00.000Z","updated_at":"2023-05-24T21:24:00.000Z"},{"id":"676bb88e-56e6-45f3-b2a9-fe93a55f9a89","platform_id":"102","document_number":"3","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","issue_date":"2023-01-25T08:00:00.000Z","due_date":"2023-01-25T08:00:00.000Z","currency_code":"USD","account_id":"","line_items":[{"id":null,"platform_id":"8","description":"A
+        Rutter Shirt","unit_amount":"2","quantity":1,"discount_amount":null,"sub_total":"2","tax_amount":null,"amount":"2","discount_percentage":null,"tax_rate_id":null,"item_id":"721f36b0-d654-4084-b318-0d9341411be6","account_id":"33970135-6336-44ff-b7e1-26c639b6c5c1"}],"status":"paid","total_discount":null,"sub_total":"2","tax_amount":null,"total_amount":"2","amount_due":null,"linked_payments":[{"id":"98f05d4c-3e8d-456c-9257-e2f0ddc0e8b7","type":"INVOICE_PAYMENT","amount":"2","date":"2023-05-20T07:00:00.000Z"}],"memo":null,"created_at":"2023-05-23T16:56:00.000Z","updated_at":"2023-05-25T18:16:00.000Z"},{"id":"1fa98002-8400-4182-bba3-12a8d64bd054","platform_id":"607","document_number":"8","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","issue_date":"2023-01-25T08:00:00.000Z","due_date":"2023-10-25T07:00:00.000Z","currency_code":"USD","account_id":"","line_items":[{"id":null,"platform_id":"8","description":"From
+        rutter rspec","unit_amount":"1","quantity":50000,"discount_amount":null,"sub_total":"50000","tax_amount":null,"amount":"50000","discount_percentage":null,"tax_rate_id":null,"item_id":"721f36b0-d654-4084-b318-0d9341411be6","account_id":"33970135-6336-44ff-b7e1-26c639b6c5c1"}],"status":"open","total_discount":null,"sub_total":"50000","tax_amount":null,"total_amount":"50000","amount_due":"50000","linked_payments":[],"memo":null,"created_at":"2023-05-25T19:43:00.000Z","updated_at":"2023-05-25T19:43:00.000Z"},{"id":"08026f77-f15a-46af-abdd-d86f4dc9ba1d","platform_id":"606","document_number":"7","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","issue_date":"2023-01-25T08:00:00.000Z","due_date":"2023-01-25T08:00:00.000Z","currency_code":"USD","account_id":"","line_items":[{"id":null,"platform_id":"8","description":"A
+        Streamlined Shirt","unit_amount":"1","quantity":50000,"discount_amount":null,"sub_total":"50000","tax_amount":null,"amount":"50000","discount_percentage":null,"tax_rate_id":null,"item_id":"721f36b0-d654-4084-b318-0d9341411be6","account_id":"33970135-6336-44ff-b7e1-26c639b6c5c1"}],"status":"open","total_discount":null,"sub_total":"50000","tax_amount":null,"total_amount":"50000","amount_due":"50000","linked_payments":[],"memo":null,"created_at":"2023-05-25T19:40:00.000Z","updated_at":"2023-05-25T19:40:00.000Z"},{"id":"e65770f8-7c25-4abf-be2f-53320b15bd7a","platform_id":"1","document_number":"1","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","issue_date":"2023-01-02T08:00:00.000Z","due_date":"2023-01-02T08:00:00.000Z","currency_code":"USD","account_id":"","line_items":[{"id":null,"platform_id":"6","description":"A
+        Rutter Shirt","unit_amount":"2","quantity":1,"discount_amount":null,"sub_total":"2","tax_amount":null,"amount":"2","discount_percentage":null,"tax_rate_id":null,"item_id":"cd042f4a-db0e-44d2-89b6-ef1f98c8f9e5","account_id":"33970135-6336-44ff-b7e1-26c639b6c5c1"}],"status":"partially_paid","total_discount":null,"sub_total":"2","tax_amount":null,"total_amount":"2","amount_due":"1.99","linked_payments":[{"id":"d76d724d-abef-4925-bea1-43ee773006eb","type":"INVOICE_PAYMENT","amount":"0.01","date":"2023-05-19T07:00:00.000Z"}],"memo":null,"created_at":"2023-05-22T19:24:00.000Z","updated_at":"2023-05-24T17:51:00.000Z"},{"id":"3953eb49-5818-499b-ab47-b9abd76b4053","platform_id":"2","document_number":"2","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","issue_date":"2023-01-02T08:00:00.000Z","due_date":"2023-01-02T08:00:00.000Z","currency_code":"USD","account_id":"","line_items":[{"id":null,"platform_id":"6","description":"A
+        Rutter Shirt","unit_amount":"5","quantity":1000,"discount_amount":null,"sub_total":"5000","tax_amount":null,"amount":"5000","discount_percentage":null,"tax_rate_id":null,"item_id":"cd042f4a-db0e-44d2-89b6-ef1f98c8f9e5","account_id":"33970135-6336-44ff-b7e1-26c639b6c5c1"}],"status":"partially_paid","total_discount":null,"sub_total":"5000","tax_amount":null,"total_amount":"5000","amount_due":"4999.99","linked_payments":[{"id":"4d08d59d-7538-4d0c-99a4-442f574d3645","type":"INVOICE_PAYMENT","amount":"0.01","date":"2023-05-24T07:00:00.000Z"}],"memo":null,"created_at":"2023-05-22T19:27:00.000Z","updated_at":"2023-05-22T19:27:00.000Z"}],"next_cursor":null,"connection":{"id":"c8b3f9d7-3362-4769-b9eb-af736c0e74b4","platform":"NETSUITE","orgId":"329f1bd7-16a7-4ad8-b59b-00e1783a3da4"}}'
+  recorded_at: Thu, 25 May 2023 22:13:45 GMT
+recorded_with: VCR 6.1.0

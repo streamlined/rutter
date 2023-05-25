@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://production.rutterapi.com/accounting/invoice_payments?access_token=<access_token>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Rutter v0.1.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic <TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 25 May 2023 22:14:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"420-x+sJSqX3vtALDJkMMwjZlgIXXCA"
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cL2UXZhKKVQi%2BMIgi%2FpZUj0IwjvvEp3Sg90%2BI%2FftUlVY7MZMZB7Rt7%2Ba8WY2PfcgoFYkOqA1GWLPJV22%2B0oeQnId4NEagcWUqnKauSzxB9fYJX8QUcw4jDG8RLGkxO%2Fxp1tbzEcYA6BNC%2BS8sGgFl0Y2tzhF8A%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7cd12104ffe82b6f-LAX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"invoice_payments":[{"id":"98f05d4c-3e8d-456c-9257-e2f0ddc0e8b7","platform_id":"505","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","account_id":"7efd4004-4b3f-469b-99dc-9930bb1b7134","total_amount":"2","currency_code":"USD","txn_date":"2023-05-20T07:00:00.000Z","memo":"a
+        memo","linked_invoices":[{"id":"676bb88e-56e6-45f3-b2a9-fe93a55f9a89","amount":"2","allocated_at":"2023-01-25T08:00:00.000Z"}],"updated_at":"2023-05-25T18:16:00.000Z"},{"id":"d76d724d-abef-4925-bea1-43ee773006eb","platform_id":"405","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","account_id":"7efd4004-4b3f-469b-99dc-9930bb1b7134","total_amount":"0.01","currency_code":"USD","txn_date":"2023-05-19T07:00:00.000Z","memo":"Rutter
+        Demo Test Customer Payment","linked_invoices":[{"id":"e65770f8-7c25-4abf-be2f-53320b15bd7a","amount":"0.01","allocated_at":"2023-01-02T08:00:00.000Z"}],"updated_at":"2023-05-25T13:22:00.000Z"}],"next_cursor":null,"connection":{"id":"c8b3f9d7-3362-4769-b9eb-af736c0e74b4","platform":"NETSUITE","orgId":"329f1bd7-16a7-4ad8-b59b-00e1783a3da4"}}'
+  recorded_at: Thu, 25 May 2023 22:14:02 GMT
+recorded_with: VCR 6.1.0

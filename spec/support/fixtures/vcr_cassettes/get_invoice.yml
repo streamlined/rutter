@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://production.rutterapi.com/accounting/invoices/bc02d284-7d24-44ed-8060-7a49bf1ab071?access_token=<access_token>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Rutter v0.1.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic <TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 25 May 2023 22:13:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"3c9-ESk7oJM6ww/RjTY4rqARQ4iEAII"
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ESY3fq7mu3gpHsZJ6RcddTUNTU5nUhgh2Bk7bn2jSLkfy6OI%2FsRkIP5Xeg3rpftL0DsUrkwHdtrIIB88C771k3xQJh8rGiY0gU13Mqt75jlF2pMtISpIim9yPoD88yd9Wu97mPIzSDg6Vaxqo7y%2FccYD4avNGw%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7cd1209feea70d4c-LAX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"invoice":{"id":"bc02d284-7d24-44ed-8060-7a49bf1ab071","platform_id":"605","document_number":"6","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","issue_date":"2023-10-25T07:00:00.000Z","due_date":"2023-10-25T07:00:00.000Z","currency_code":"USD","account_id":"","line_items":[{"id":null,"platform_id":"8","description":"Created
+        from rspec","unit_amount":"1","quantity":99999,"discount_amount":null,"sub_total":"99999","tax_amount":null,"amount":"99999","discount_percentage":null,"tax_rate_id":null,"item_id":"721f36b0-d654-4084-b318-0d9341411be6","account_id":"33970135-6336-44ff-b7e1-26c639b6c5c1"}],"status":"open","total_discount":null,"sub_total":"99999","tax_amount":null,"total_amount":"99999","amount_due":"99999","linked_payments":[],"memo":null,"created_at":"2023-05-25T19:26:00.000Z","updated_at":"2023-05-25T19:26:00.000Z"},"connection":{"id":"c8b3f9d7-3362-4769-b9eb-af736c0e74b4","platform":"NETSUITE","orgId":"329f1bd7-16a7-4ad8-b59b-00e1783a3da4"}}'
+  recorded_at: Thu, 25 May 2023 22:13:45 GMT
+recorded_with: VCR 6.1.0
