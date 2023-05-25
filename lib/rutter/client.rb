@@ -1,8 +1,10 @@
 module Rutter
   class Client < BaseClient
     autoload :Accounting, "rutter/client/accounting"
+    autoload :Common, "rutter/client/common"
 
     include Accounting
+    include Common
 
     def initialize(api_base_url: nil, client_id: nil, client_secret: nil, headers: {})
       api_base_url ||= Rutter.api_base_url
