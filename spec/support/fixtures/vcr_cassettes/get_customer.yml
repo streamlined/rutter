@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 25 May 2023 22:14:01 GMT
+      - Fri, 26 May 2023 00:08:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -41,18 +41,18 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sFH%2FTnJ0HM5aomXbuGEQHi1oyh54n1TUMw%2F9CgbpEsj2IttVXhbfGjqQWoOPS%2FdvkLMy3iyVc5ECSKSVD3BdXvM28YZ5FRmH92w27F86CHhaF5LDdEwA0mI5nhFmL6eiZc2PHXeAgaMIX90iVI1veeeAfk%2FQYw%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FUpA05%2F8qcZ0KNDAGeStp3IZEpHRMY97xck0McJZeobkEAaySu%2FjSKHaAOt2hSLldq1NFTOsQ2hoZ3GgDBLmkHccX3fa9mPU7anWG2Y6TBnCNj4UAFYFhr5YzH3l9FRm1G%2FZT0VQ1cBAJxsCgzMkMO%2B5Xw9REg%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 7cd121024c737cda-LAX
+      - 7cd1c85cfac431fd-LAX
     body:
       encoding: ASCII-8BIT
       string: '{"customer":{"id":"00144897-32bb-4e78-8946-1937ebdfef94","platform_id":"109","customer_name":"test
         customer","contact_name":null,"email":"test@gmail.com","currency_code":null,"phone":"+1712345344","addresses":[{"type":"billing","address1":"123
         Fake Street","address2":null,"city":"Los Angeles","region":"CA","country":"US","postal_code":"90021"},{"type":"shipping","address1":"123
         Fake Street","address2":null,"city":"Los Angeles","region":"CA","country":"US","postal_code":"90021"}],"registration_number":null,"tax_number":null,"updated_at":"2023-05-23T22:48:00.000Z","status":"INACTIVE"},"connection":{"id":"c8b3f9d7-3362-4769-b9eb-af736c0e74b4","platform":"NETSUITE","orgId":"329f1bd7-16a7-4ad8-b59b-00e1783a3da4"}}'
-  recorded_at: Thu, 25 May 2023 22:14:01 GMT
+  recorded_at: Fri, 26 May 2023 00:08:16 GMT
 recorded_with: VCR 6.1.0

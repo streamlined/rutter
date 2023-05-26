@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 25 May 2023 22:14:02 GMT
+      - Fri, 26 May 2023 00:08:17 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -41,16 +41,16 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NROA2vFBHUZFMSEpo8sBSKCGAlOt5ZdBhhdsSedk3lq1BKjthJf84uJsRy%2Fg1s3b1bzMrp4Y7zCjSOEPOan8l5dt3p2EzqSK%2FWE0CI8crcRsa65viGHd02kp1pOOJERziUS%2FKXKwVqf4K7dCzNClQD9s%2BsN1rw%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TsERldD4WTyS9%2FOsqvgSiJLSaX8DE0GhSsn0mljSCEh9qeu1qMKh08EfIeNBXc%2BHy3BgJzXKtLtuRkiiAYali52WSm%2FpGT5srKZIr3n%2Ba7e1bZxX9G1c%2FaD5ZAODMKYqDaSYyNTaRtpn38YVbEgcZD%2Fmfd4wMA%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 7cd12107bdf77be0-LAX
+      - 7cd1c861fe422a89-LAX
     body:
       encoding: ASCII-8BIT
       string: '{"invoice_payment":{"id":"98f05d4c-3e8d-456c-9257-e2f0ddc0e8b7","platform_id":"505","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","account_id":"7efd4004-4b3f-469b-99dc-9930bb1b7134","total_amount":"2","currency_code":"USD","txn_date":"2023-05-20T07:00:00.000Z","memo":"a
         memo","linked_invoices":[{"id":"676bb88e-56e6-45f3-b2a9-fe93a55f9a89","amount":"2","allocated_at":"2023-01-25T08:00:00.000Z"}],"updated_at":"2023-05-25T18:16:00.000Z"},"connection":{"id":"c8b3f9d7-3362-4769-b9eb-af736c0e74b4","platform":"NETSUITE","orgId":"329f1bd7-16a7-4ad8-b59b-00e1783a3da4"}}'
-  recorded_at: Thu, 25 May 2023 22:14:02 GMT
+  recorded_at: Fri, 26 May 2023 00:08:17 GMT
 recorded_with: VCR 6.1.0

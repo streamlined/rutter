@@ -38,7 +38,7 @@ RSpec.describe Rutter::Client::Accounting do
     describe 'get_invoice' do
       let(:rutter_id) { "bc02d284-7d24-44ed-8060-7a49bf1ab071" }
 
-      it 'should return a list of invoices with the correct attributes' do
+      it 'should return an invoice with the correct attributes' do
         VCR.use_cassette('get_invoice') do
           response = client.get_invoice(access_token: access_token, rutter_id: rutter_id)
           expect(response).to be_a(Hash)
@@ -231,7 +231,7 @@ RSpec.describe Rutter::Client::Accounting do
     describe 'get_invoice_payment' do
       let(:rutter_id) { "98f05d4c-3e8d-456c-9257-e2f0ddc0e8b7" }
 
-      it 'should return a list of invoices with the correct attributes' do
+      it 'should return a list of invoice payments with the correct attributes' do
         VCR.use_cassette('get_invoice_payment') do
           response = client.get_invoice_payment(access_token: access_token, rutter_id: rutter_id)
           expect(response).to be_a(Hash)
@@ -251,7 +251,7 @@ RSpec.describe Rutter::Client::Accounting do
       end
     end
 
-    describe 'create_invoice' do
+    describe 'create_invoice_payment' do
       let(:body) do
         {
           "invoice_payment": {
@@ -270,30 +270,27 @@ RSpec.describe Rutter::Client::Accounting do
         }
       end
 
-      it 'should return an invoice with the correct attributes' do
-        VCR.use_cassette('create_invoice') do
-          response = client.create_invoice(access_token: access_token, body: body)
+      it 'should return an invoice payment with the correct attributes' do
+        VCR.use_cassette('create_invoice_payment') do
+          response = client.create_invoice_payment(access_token: access_token, body: body)
           expect(response).to be_a(Hash)
-          invoice = response["invoice"]
-          expect(invoice).to have_key("id")
-          expect(invoice).to have_key("platform_id")
-          expect(invoice).to have_key("customer_id")
-          expect(invoice).to have_key("issue_date")
-          expect(invoice).to have_key("due_date")
-          expect(invoice).to have_key("currency_code")
-          expect(invoice).to have_key("total_amount")
-          expect(invoice).to have_key("sub_total")
-          expect(invoice).to have_key("total_discount")
-          expect(invoice).to have_key("amount_due")
-          expect(invoice).to have_key("line_items")
-          expect(invoice).to have_key("linked_payments")
-          expect(invoice).to have_key("status")
+          invoice_payment = response["invoice_payment"]
+          expect(invoice_payment).to have_key("id")
+          expect(invoice_payment).to have_key("platform_id")
+          expect(invoice_payment).to have_key("customer_id")
+          expect(invoice_payment).to have_key("account_id")
+          expect(invoice_payment).to have_key("total_amount")
+          expect(invoice_payment).to have_key("currency_code")
+          expect(invoice_payment).to have_key("txn_date")
+          expect(invoice_payment).to have_key("memo")
+          expect(invoice_payment).to have_key("linked_invoices")
+          expect(invoice_payment).to have_key("updated_at")
         end
       end
     end
 
     describe 'get_customers' do
-      it 'should return a list of invoices with the correct attributes' do
+      it 'should return a list of customers with the correct attributes' do
         VCR.use_cassette('get_customers') do
           response = client.get_customers(access_token: access_token)
           expect(response).to have_key("connection")

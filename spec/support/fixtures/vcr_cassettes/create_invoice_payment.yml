@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://production.rutterapi.com/accounting/invoice_payments?access_token=<access_token>
+    body:
+      encoding: UTF-8
+      string: '{"invoice_payment":{"customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","account_id":"7efd4004-4b3f-469b-99dc-9930bb1b7134","total_amount":2,"currency_code":"USD","txn_date":"2023-05-20T02:34:56.000Z","memo":"a
+        memo","linked_invoices":[{"id":"3953eb49-5818-499b-ab47-b9abd76b4053","amount":2,"allocated_at":"2023-05-20T02:34:56.000Z"}]}}'
+    headers:
+      User-Agent:
+      - Rutter v0.1.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic <TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 26 May 2023 00:08:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"1be-2AkeMYNmSzMqgZ0zjFmlLtgAgkc"
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DXzZep%2BItTjItU0p5x4TE6k0gvSaZV3TVrsZ8xJeXvxaphJpoOd9mTr0E013f%2FdCs8xK%2FqpaTVBHYkMTwQ7t7KXx5nEtvMyZSxTqJ1vukikeffCUUUrs11RDVkejFbQRVnGukom0G%2BhHnaFaiaFi79z73Th9Qg%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7cd1c8648f5a2f32-LAX
+    body:
+      encoding: ASCII-8BIT
+      string: '{"invoice_payment":{"id":"02cff0e2-8629-4572-8fb1-4a106dae28d3","platform_id":"905","customer_id":"25c94fdb-4426-42d9-b7f6-f541593e83cd","account_id":"7efd4004-4b3f-469b-99dc-9930bb1b7134","total_amount":"2","currency_code":"USD","txn_date":"2023-05-20T07:00:00.000Z","memo":"a
+        memo","linked_invoices":[{"id":"3953eb49-5818-499b-ab47-b9abd76b4053","amount":"2","allocated_at":"2023-01-02T08:00:00.000Z"}],"updated_at":"2023-05-26T00:08:00.000Z"}}'
+  recorded_at: Fri, 26 May 2023 00:08:26 GMT
+recorded_with: VCR 6.1.0
