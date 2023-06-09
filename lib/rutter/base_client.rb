@@ -19,8 +19,8 @@ module Rutter
       define_method(method) do |url, args = {}, &block|
         begin
           response = @conn.__send__(method, url, args)
-        rescue Faraday::ClientError, Faraday::ServerError => e
-          Failure APIConnectionError.faraday_error(e)
+        rescue Faraday::ClientError, Faraday::ServerError, Faraday::ParsingError => e
+          response = e.response
         end
 
         payload = handle_response(response)

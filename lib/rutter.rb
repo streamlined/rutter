@@ -11,10 +11,10 @@ module Rutter
   autoload :Types, "rutter/types"
   autoload :Error, "rutter/error"
 
-  @api_base_url = "https://production.rutterapi.com"
+  @api_base_url = "https://production.rutterapi.com/versioned"
 
   class << self
-    attr_accessor :api_base_url, :client_id, :client_secret, :debug_logger
+  attr_accessor :api_base_url, :client_id, :client_secret, :debug_logger
 
     def client
       @client ||= Client.new(

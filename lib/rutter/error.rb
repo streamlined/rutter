@@ -24,10 +24,12 @@ module Rutter
 
     def initialize(
       status_code: 500,
+      status: 500,
       error: "Something went wrong with communication with Rutter API.",
       error_type: "API error",
       error_code: 500,
-      error_message: nil
+      error_message: nil,
+      body: nil
     )
       super
       @status_code = status_code
@@ -35,9 +37,12 @@ module Rutter
       @error_type = error_type
       @error_code = error_code
       @error_message = error_message
+      @status = status
+      @body = body
     end
 
     def self.from_response(status, body, _headers)
+      return ClientError.new(status: status, body: body)
       parsed_error = parse_error(body)
       status_code = parsed_error.dig(:status_code)
       error = parsed_error.dig(:error)
