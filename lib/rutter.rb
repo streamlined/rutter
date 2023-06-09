@@ -11,7 +11,7 @@ module Rutter
   autoload :Types, "rutter/types"
   autoload :Error, "rutter/error"
 
-  @api_base_url = "https://production.rutterapi.com/versioned"
+  @api_base_url = "https://production.rutterapi.com"
 
   class << self
   attr_accessor :api_base_url, :client_id, :client_secret, :debug_logger
