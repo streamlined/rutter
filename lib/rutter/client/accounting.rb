@@ -11,7 +11,7 @@ module Rutter
         updated_at_max: nil,
         updated_at_min: nil
       )
-        get("/versioned/accounting/invoices", {
+        get("accounting/invoices", {
             access_token: access_token,
             cursor: cursor,
             expand: expand,
@@ -23,14 +23,14 @@ module Rutter
       end
 
       def get_invoice(access_token:, rutter_id:)
-        get("/versioned/accounting/invoices/#{rutter_id}", {
+        get("accounting/invoices/#{rutter_id}", {
           access_token: access_token,
           force_fetch: false
         })
       end
 
       def create_invoice(access_token:, body: {})
-        post("/versioned/accounting/invoices?access_token=#{access_token}", body)
+        post("accounting/invoices?access_token=#{access_token}", body)
       end
 
       def get_customers(
@@ -42,7 +42,7 @@ module Rutter
         updated_at_max: nil,
         updated_at_min: nil
       )
-        get("/versioned/accounting/customers", {
+        get("accounting/customers", {
           access_token: access_token,
           cursor: cursor,
           expand: expand,
@@ -54,7 +54,7 @@ module Rutter
       end
 
       def get_customer(access_token:, rutter_id:, force_fetch: false)
-        get("/versioned/accounting/customers/#{rutter_id}", {
+        get("accounting/customers/#{rutter_id}", {
           access_token: access_token,
           force_fetch: force_fetch
         }.compact)
@@ -62,7 +62,7 @@ module Rutter
 
       # Netsuite functionality should be released soon
       def create_customer(access_token:, body: {})
-        post("/versioned/accounting/customers?access_token=#{access_token}", body)
+        post("accounting/customers?access_token=#{access_token}", body)
       end
 
       def get_invoice_credit_memos(
@@ -74,7 +74,7 @@ module Rutter
         updated_at_max: nil,
         updated_at_min: nil
       )
-        get("/versioned/accounting/invoice_credit_memos", {
+        get("accounting/invoice_credit_memos", {
           access_token: access_token,
           cursor: cursor,
           expand: expand,
@@ -86,14 +86,14 @@ module Rutter
       end
 
       def get_invoice_credit_memo(access_token:, rutter_id:, force_fetch: false)
-        get("/versioned/accounting/invoice_credit_memos/#{rutter_id}", {
+        get("accounting/invoice_credit_memos/#{rutter_id}", {
           access_token: access_token,
           force_fetch: force_fetch
         }.compact)
       end
 
       def create_invoice_credit_memo(access_token:, body: {})
-        post("/versioned/accounting/invoice_credit_memos?access_token=#{access_token}", body)
+        post("accounting/invoice_credit_memos?access_token=#{access_token}", body)
       end
 
       def get_invoice_payments(
@@ -105,7 +105,7 @@ module Rutter
         updated_at_max: nil,
         updated_at_min: nil
       )
-        get("/versioned/accounting/invoice_payments", {
+        get("accounting/invoice_payments", {
           access_token: access_token,
           cursor: cursor,
           expand: expand,
@@ -117,14 +117,14 @@ module Rutter
       end
 
       def get_invoice_payment(access_token:, rutter_id:, force_fetch: false)
-        get("/versioned/accounting/invoice_payments/#{rutter_id}", {
+        get("accounting/invoice_payments/#{rutter_id}", {
           access_token: access_token,
           force_fetch: force_fetch
         }.compact)
       end
 
       def create_invoice_payment(access_token:, body: {})
-        post("/versioned/accounting/invoice_payments?access_token=#{access_token}", body)
+        post("accounting/invoice_payments?access_token=#{access_token}", body)
       end
 
       def get_sales_orders(
@@ -136,7 +136,7 @@ module Rutter
         updated_at_max: nil,
         updated_at_min: nil
       )
-        get("/versioned/accounting/sales_orders", {
+        get("accounting/sales_orders", {
           access_token: access_token,
           cursor: cursor,
           expand: expand,
@@ -148,14 +148,14 @@ module Rutter
       end
 
       def get_sales_order(access_token:, rutter_id:, force_fetch: false)
-        get("/versioned/accounting/sales_orders/#{rutter_id}", {
+        get("accounting/sales_orders/#{rutter_id}", {
           access_token: access_token,
           force_fetch: force_fetch
         }.compact)
       end
 
       def create_sales_order(access_token:, body: {})
-        post("/versioned/accounting/sales_orders?access_token=#{access_token}", body)
+        post("accounting/sales_orders?access_token=#{access_token}", body)
       end
     end
   end
