@@ -22,7 +22,8 @@ module Rutter
       {
         "User-Agent" => "Rutter v#{Rutter::VERSION}",
         "Content-Type" => "application/json",
-        "Authorization" => "Basic #{encoded_api_key}"
+        "Authorization" => "Basic #{encoded_api_key}",
+        "x-rutter-version" => "2023-03-14"
       }
     end
   end
