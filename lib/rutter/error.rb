@@ -42,7 +42,6 @@ module Rutter
     end
 
     def self.from_response(status, body, _headers)
-      return ClientError.new(status: status, body: body)
       parsed_error = parse_error(body)
       status_code = parsed_error.dig(:status_code)
       error = parsed_error.dig(:error)
