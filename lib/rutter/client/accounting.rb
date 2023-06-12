@@ -176,13 +176,14 @@ module Rutter
           updated_at_max: updated_at_max,
           updated_at_min: updated_at_min
         }.compact)
-    end
+      end
 
-    def get_account(access_token:, rutter_id:, force_fetch: false)
-      get("accounting/accounts/#{rutter_id}", {
-        access_token: access_token,
-        force_fetch: force_fetch
-      }.compact)
+      def get_account(access_token:, rutter_id:, force_fetch: false)
+        get("accounting/accounts/#{rutter_id}", {
+          access_token: access_token,
+          force_fetch: force_fetch
+        }.compact)
+      end
     end
   end
 end
