@@ -184,6 +184,32 @@ module Rutter
           force_fetch: force_fetch
         }.compact)
       end
+
+      def get_items(
+        access_token:,
+        cursor: nil,
+        expand: nil,
+        force_fetch: false,
+        limit: nil,
+        updated_at_max: nil,
+        updated_at_min: nil)
+        get("accounting/items", {
+          access_token: access_token,
+          cursor: cursor,
+          expand: expand,
+          force_fetch: force_fetch,
+          limit: limit,
+          updated_at_max: updated_at_max,
+          updated_at_min: updated_at_min
+        }.compact)
+      end
+
+      def get_item(access_token:, rutter_id:, force_fetch: false)
+        get("accounting/items/#{rutter_id}", {
+          access_token: access_token,
+          force_fetch: force_fetch
+        }.compact)
+      end
     end
   end
 end
